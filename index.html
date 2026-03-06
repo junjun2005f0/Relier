@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Relier</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#talent">TALENT</a></li>
+        <li><a href="#news-event">News-Event</a></li>
+        <li><a href="#audition">AUDITION</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+     <img src="Relier.png" class="top-logo">
+    <div class="logo">
+    <svg width="300" height="80" viewBox="0 0 300 80">
+      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-size="48" font-weight="300" fill="#444" letter-spacing="8">
+        Relier
+      </text>
+    </svg>
+  </div>
+    <p>歌で繋がる、想いを届ける。</p>
+  </section>
+
+  <section id="about" class="fade">
+    <h2>ABOUT</h2>
+    <p>Relierは歌に特化した配信事務所です。</p>
+  </section>
+
+  <section id="talent" class="fade">
+  <h2>TALENT</h2>
+
+  <div class="card-container">
+
+    <a href="lsinger.html" class="card">
+    <h3>Lシンガー</h3>
+    <p>タップして一覧へ</p>
+  </a>
+
+  <a href="kao.html" class="card">
+    <h3>ライブ配信</h3>
+    <p>タップして一覧へ</p>
+  </a>
+
+  <a href="vtu.html" class="card">
+    <h3>Vtuber</h3>
+    <p>タップして一覧へ</p>
+  </a>
+
+  </div>
+  </section>
+
+  <section id="news-event" class="fade">
+    <h2>News-Event</h2>
+    <p>直近の加入メンバーやイベント予定はこちら
+    </p>
+    <div class="news-item">
+  <span>2026.05.01</span>
+    <p>Relier　事務所始動</p>
+    </div>
+  </section>
+
+  <section id="audition" class="fade">
+    <h2>AUDITION</h2>
+    <p>歌に本気な配信者を募集しています。</p>
+  </section>
+
+  <section id="contact" class="fade">
+    <h2>CONTACT</h2>
+    <p>お問い合わせはこちら。</p>
+     <a href="https://lin.ee/JazUjHW" target="_blank" rel="noopener">
+    <img 
+      src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+      alt="LINEで友だち追加"
+      height="40">
+  </a>
+  </section>
+
+  <script>
+  const fades = document.querySelectorAll('.fade');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  fades.forEach(fade => {
+    observer.observe(fade);
+  });
+</script>
+<footer>
+  <p>© 2026 Relier. </p>
+</footer>
+</body>
+</html>

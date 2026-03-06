@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Talent | Relier</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="talent.html">TALENT</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>TALENT</h1>
+  <p>所属Vtuber一覧</p>
+  <p>まだいません。お待ちくださいｍ(_ _)ｍ</p>
+</section>
+
+<section class="fade">
+  <div class="talent-grid">
+
+    <div class="talent-card">
+      <img src="talent1.jpg" alt="き">
+      <div class="talent-info">
+        <h3>き</a></h3>
+        <p>Vtuber</p>
+      </div>
+    </div>
+
+    <div class="talent-card">
+      <img src="talent2.jpg" alt="く">
+      <div class="talent-info">
+        <h3>く</h3>
+        <p>Vtuber</p>
+      </div>
+    </div>
+
+    <div class="talent-card">
+      <img src="talent3.jpg" alt="け">
+      <div class="talent-info">
+        <h3>け</h3>
+        <p>Vtuber</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Relier</p>
+</footer>
+
+<script>
+const fades = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+fades.forEach(fade => {
+  observer.observe(fade);
+});
+</script>
+
+</body>
+</html>
