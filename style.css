@@ -329,3 +329,11 @@ opacity:0.9;
     margin-top: 24px;
   }
 }
+@media (max-width: 768px) {
+  .nav {
+    gap: 28px;
+    font-size: 13px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
